@@ -1,0 +1,6 @@
+D:\Asp.netCore\MediaNote\MediaNote.Utility\bin\Debug\MediaNote.Utility.dll
+D:\Asp.netCore\MediaNote\MediaNote.Utility\bin\Debug\MediaNote.Utility.pdb
+D:\Asp.netCore\MediaNote\MediaNote.Utility\obj\Debug\MediaNote.Utility.csproj.CoreCompileInputs.cache
+D:\Asp.netCore\MediaNote\MediaNote.Utility\obj\Debug\MediaNote.Utility.dll
+D:\Asp.netCore\MediaNote\MediaNote.Utility\obj\Debug\MediaNote.Utility.pdb
+D:\Asp.netCore\MediaNote\MediaNote.Utility\obj\Debug\MediaNote.Utility.csprojAssemblyReference.cache

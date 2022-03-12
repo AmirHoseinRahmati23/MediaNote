@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MediaNote.exe" version="1.0.0.0" publicKeyToken="0009135657a000ce" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="MediaNote" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="MediaNote.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.dll" size="5225168">
+      <assemblyIdentity name="EntityFramework" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>nCD7KthqdgsMauvZMByQCYkdAq4UcgqTkmwLU1uK0Js=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="EntityFramework.SqlServer.dll" size="622288">
+      <assemblyIdentity name="EntityFramework.SqlServer" version="6.0.0.0" publicKeyToken="B77A5C561934E089" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>4OEmw7inupUB0D+Z1Upcu9F0vOy2FwCYq0zBIZ8n+TM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MediaNote.exe" size="186336">
+      <assemblyIdentity name="MediaNote" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>2HTerVzoNPCZGvbMMY7EIcap9daUkwHodg2k6IBDBXs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MediaNote.DataLayer.dll" size="24576">
+      <assemblyIdentity name="MediaNote.DataLayer" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>zNVP9gbhfZ/D1Z1UuUlWNrJ7RIXt7uv/8e3DW+QbJDo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MediaNote.Utility.dll" size="14848">
+      <assemblyIdentity name="MediaNote.Utility" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>RZa3YTFYNB7Cxf7HZ4WvJPBFt1sPHwFb/7x+Wml0iXo=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MediaNote.ViewModel.dll" size="5120">
+      <assemblyIdentity name="MediaNote.ViewModel" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>X1ogOOAOqM+iU/OUTvWP3OonnTN7btvwnwoxr9c48Sc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="MediaNote.exe.config" size="586">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MSDDWtbR8j1byMPOCy10B6qbdTa2qrrstz4//4UHHiU=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-VDE36HU\yaran" issuerKeyHash="a11909010064fb79ea63529a2672fc8f009ad68a" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>OBJuasdiovReWwEpxiz72wJD+Nv0oHhWEHH2KkbQk5c=</DigestValue></Reference></SignedInfo><SignatureValue>Hek4uhl8hrZgqDyM2CgL/P0ITXz1saO8QjjRXoBr8+7/LwfsXdhsw8PdbdeczCEb8ydWoK0cSH1f56bd4K7byDfdGDhiXyp+bs+F3mBnFfB0rCtNO7BHxib9WHf83UeJ+1BZS4bmIWcOycLr76hF72nkfdpyVm/L26rVL/JFm3Y=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>r/Nxv6YVskn/FXohoWx56M5r+ICm5GXyCpIPuyJ5Iy/TIymb7J/SJCnfnGw04IKDbhdaCIY1j2eSWnyNRFe3NvZ91nirh50qg3IsMq9KL6wRzFfu0V3G+Rnio70hR1GwnIx8hd4csQvXwa4DexLY1hgBW4KxJu4+xoAVsoT/jZ0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="9793d0462af671105678a0f4dbf84302dbfb2cc629015b5ef4a262c76a6e1238" Description="" Url=""><as:assemblyIdentity name="MediaNote.exe" version="1.0.0.0" publicKeyToken="0009135657a000ce" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-VDE36HU\yaran</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>7k1MRfMhZo1gQuXVCPRNcBo6f8J/DX4q0ENUFT8ScOQ=</DigestValue></Reference></SignedInfo><SignatureValue>gRE2GGV1tHxxXGFi9YKaCJpO2VkPoDJP7x3aMvg1HK2U4FuUjKKL3hBtUMcnt8mEpJFJB+nH0DjxFLKZO2KpWcVyk3/EiqE9vkLgRopva4jVFP+wDoIYwfSKSeXAvaDc+riOjqN83RZ9ruB/yKSQa4uDL+MwitVrYLK6TfD3gwo=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>r/Nxv6YVskn/FXohoWx56M5r+ICm5GXyCpIPuyJ5Iy/TIymb7J/SJCnfnGw04IKDbhdaCIY1j2eSWnyNRFe3NvZ91nirh50qg3IsMq9KL6wRzFfu0V3G+Rnio70hR1GwnIx8hd4csQvXwa4DexLY1hgBW4KxJu4+xoAVsoT/jZ0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQFxNOtarDlatPE1v7nWbWuTANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFYARABFADMANgBIAFUAXAB5AGEAcgBhAG4wHhcNMjAwOTA1MTUxNzA4WhcNMjEwOTA1MjExNzA4WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtAFYARABFADMANgBIAFUAXAB5AGEAcgBhAG4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAK/zcb+mFbJJ/xV6IaFseejOa/iApuRl8gqSD7sieSMv0yMpm+yf0iQp35xsNOCCg24XWgiGNY9nklp8jURXtzb2fdZ4q4edKoNyLDKvSi+sEcxX7tFdxvkZ4qO9IUdRsJyMfIXeHLEL18GuA3sS2NYYAVuCsSbuPsaAFbKE/42dAgMBAAEwDQYJKoZIhvcNAQELBQADgYEADDhg34juaN0DTvyKzZx89LtHwdbWxXOJjR0+n+u75+dHYspInIgm6U2t7HN1ZFNNnom02F26XEc3Avcl9MbQxuozzh6+BNT3982ZkbjWRsGPLEhrQu0guSieasGPoKD6Mws8YSoZPqPOrRUpNHVW+Wo/fzL2nPdEQDYjn0AXz/Q=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

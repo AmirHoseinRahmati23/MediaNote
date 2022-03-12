@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MediaNoteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MediaNote">
+    <Key>
+      <PropertyRef Name="MediaId" />
+    </Key>
+    <Property Name="MediaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TypeId" Type="Int32" Nullable="false" />
+    <Property Name="PersonId" Type="Int32" Nullable="false" />
+    <Property Name="RateInIMDB" Type="Double" />
+    <Property Name="PersianName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="EnglishName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NameInMediaCountry" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Information" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Person" Relationship="Self.FK_MediaNote_Person" FromRole="MediaNote" ToRole="Person" />
+    <Property Name="ReleaseYear" Type="Int32" />
+    <NavigationProperty Name="Type1" Relationship="MediaNoteModel.FK_MediaNote_Type1" FromRole="MediaNote" ToRole="Type" />
+    <Property Name="MediaImage" Type="String" MaxLength="3000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="EmailOrMobile" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="MediaNote" Relationship="Self.FK_MediaNote_Person" FromRole="Person" ToRole="MediaNote" />
+  </EntityType>
+  <EntityType Name="Type">
+    <Key>
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Name="TypeId" Type="Int32" Nullable="false" />
+    <Property Name="TypeTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="MediaNotes" Relationship="MediaNoteModel.FK_MediaNote_Type1" FromRole="Type" ToRole="MediaNote" />
+  </EntityType>
+  <Association Name="FK_MediaNote_Person">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="MediaNote" Type="Self.MediaNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="MediaNote">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MediaNoteEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MediaNote" EntityType="Self.MediaNote" />
+    <EntitySet Name="Person" EntityType="Self.Person" />
+    <EntitySet Name="Type" EntityType="Self.Type" />
+    <AssociationSet Name="FK_MediaNote_Person" Association="Self.FK_MediaNote_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="MediaNote" EntitySet="MediaNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MediaNote_Type1" Association="MediaNoteModel.FK_MediaNote_Type1">
+      <End Role="Type" EntitySet="Type" />
+      <End Role="MediaNote" EntitySet="MediaNote" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK_MediaNote_Type1">
+    <End Type="MediaNoteModel.Type" Role="Type" Multiplicity="1" />
+    <End Type="MediaNoteModel.MediaNote" Role="MediaNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Type">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="MediaNote">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

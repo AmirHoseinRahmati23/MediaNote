@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MediaNoteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="MediaNote">
+    <Key>
+      <PropertyRef Name="MediaId" />
+    </Key>
+    <Property Name="MediaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeId" Type="int" Nullable="false" />
+    <Property Name="PersonId" Type="int" Nullable="false" />
+    <Property Name="ReleaseYear" Type="int" />
+    <Property Name="RateInIMDB" Type="float" />
+    <Property Name="PersianName" Type="nvarchar" MaxLength="150" />
+    <Property Name="EnglishName" Type="nvarchar" MaxLength="150" />
+    <Property Name="NameInMediaCountry" Type="nvarchar" MaxLength="150" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="150" />
+    <Property Name="Information" Type="nvarchar" MaxLength="300" />
+    <Property Name="MediaImage" Type="nvarchar" MaxLength="3000" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="EmailOrMobile" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Type">
+    <Key>
+      <PropertyRef Name="TypeId" />
+    </Key>
+    <Property Name="TypeId" Type="int" Nullable="false" />
+    <Property Name="TypeTitle" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_MediaNote_Person">
+    <End Role="Person" Type="Self.Person" Multiplicity="1" />
+    <End Role="MediaNote" Type="Self.MediaNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="PersonId" />
+      </Principal>
+      <Dependent Role="MediaNote">
+        <PropertyRef Name="PersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MediaNote_Type">
+    <End Role="Type" Type="Self.Type" Multiplicity="1" />
+    <End Role="MediaNote" Type="Self.MediaNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Type">
+        <PropertyRef Name="TypeId" />
+      </Principal>
+      <Dependent Role="MediaNote">
+        <PropertyRef Name="TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="MediaNoteModelStoreContainer">
+    <EntitySet Name="MediaNote" EntityType="Self.MediaNote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Person" EntityType="Self.Person" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Type" EntityType="Self.Type" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_MediaNote_Person" Association="Self.FK_MediaNote_Person">
+      <End Role="Person" EntitySet="Person" />
+      <End Role="MediaNote" EntitySet="MediaNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MediaNote_Type" Association="Self.FK_MediaNote_Type">
+      <End Role="Type" EntitySet="Type" />
+      <End Role="MediaNote" EntitySet="MediaNote" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

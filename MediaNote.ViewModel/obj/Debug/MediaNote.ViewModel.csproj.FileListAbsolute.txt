@@ -1,0 +1,6 @@
+D:\Asp.netCore\MediaNote\MediaNote.ViewModel\bin\Debug\MediaNote.ViewModel.dll
+D:\Asp.netCore\MediaNote\MediaNote.ViewModel\bin\Debug\MediaNote.ViewModel.pdb
+D:\Asp.netCore\MediaNote\MediaNote.ViewModel\obj\Debug\MediaNote.ViewModel.csproj.CoreCompileInputs.cache
+D:\Asp.netCore\MediaNote\MediaNote.ViewModel\obj\Debug\MediaNote.ViewModel.dll
+D:\Asp.netCore\MediaNote\MediaNote.ViewModel\obj\Debug\MediaNote.ViewModel.pdb
+D:\Asp.netCore\MediaNote\MediaNote.ViewModel\obj\Debug\MediaNote.ViewModel.csprojAssemblyReference.cache

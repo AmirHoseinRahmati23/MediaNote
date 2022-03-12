@@ -1,0 +1,14 @@
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\obj\Debug\MediaNote.DataLayer.csprojAssemblyReference.cache
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\obj\Debug\MediaNote.DataLayer.csproj.CoreCompileInputs.cache
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\bin\Debug\MediaNote.DataLayer.dll.config
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\bin\Debug\MediaNote.DataLayer.dll
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\bin\Debug\MediaNote.DataLayer.pdb
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\bin\Debug\EntityFramework.dll
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\bin\Debug\EntityFramework.xml
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\obj\Debug\MediaNote.DataLayer.csproj.CopyComplete
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\obj\Debug\MediaNote.DataLayer.dll
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\obj\Debug\MediaNote.DataLayer.pdb
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\bin\Debug\MediaNote.ViewModel.dll
+D:\Asp.netCore\MediaNote\MediaNote.DataLayer\bin\Debug\MediaNote.ViewModel.pdb
